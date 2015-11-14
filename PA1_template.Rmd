@@ -31,7 +31,7 @@ CleanActivityData <- ActivityData[!is.na(ActivityData$steps),]
 ```{r, echo= TRUE}
 StepsSumByDay <- aggregate(CleanActivityData$steps, by=list(CleanActivityData$date), FUN=sum)
 colnames(StepsSumByDay) <- c("date","steps")
-head(StepsSumByDay)
+head(StepsSumByDay) #Only first few lines displayed for clarity
 ```
 2. Plot the histogram
 ```{r, echo= TRUE}
@@ -43,12 +43,12 @@ hist(StepsSumByDay$steps)
 Mean of steps by Day
 ```{r, echo= TRUE}
 StepsMeanByDay <- aggregate(CleanActivityData$steps, by=list(CleanActivityData$date), FUN=mean)
-head(StepsMeanByDay)
+head(StepsMeanByDay) #Only first few lines displayed for clarity
 ```
 Median of steps by Day
 ```{r, echo= TRUE}
 StepsMedianByDay <- aggregate(CleanActivityData$steps, by=list(CleanActivityData$date), FUN=median)
-head(StepsMedianByDay)
+head(StepsMedianByDay) #Only first few lines displayed for clarity
 ```
 
 ```{r, echo= FALSE, results="hide"}
@@ -113,10 +113,10 @@ colnames(StepsSumByDay2) <- c("date","steps")
 hist(StepsSumByDay2$steps)
 # Mean of steps by Day
 StepsMeanByDay2 <- aggregate(ActivityDataFilled$steps, by=list(ActivityDataFilled$date), FUN=mean)
-head(StepsMeanByDay2)
+head(StepsMeanByDay2) #Only first few lines displayed for clarity
 # Median of steps by Day
 StepsMedianByDay2 <- aggregate(ActivityDataFilled$steps, by=list(ActivityDataFilled$date), FUN=median)
-head(StepsMedianByDay2)
+head(StepsMedianByDay2) #Only first few lines displayed for clarity
 ```
 
 #### Analysis of the changes:

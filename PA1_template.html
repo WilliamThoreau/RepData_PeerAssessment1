@@ -229,7 +229,7 @@ ActivityData&lt;-read.csv(FilePath)
 
 <pre><code class="r">StepsSumByDay &lt;- aggregate(CleanActivityData$steps, by=list(CleanActivityData$date), FUN=sum)
 colnames(StepsSumByDay) &lt;- c(&quot;date&quot;,&quot;steps&quot;)
-head(StepsSumByDay)
+head(StepsSumByDay) #Only first few lines displayed for clarity
 </code></pre>
 
 <pre><code>##         date steps
@@ -257,7 +257,7 @@ head(StepsSumByDay)
 <p>Mean of steps by Day</p>
 
 <pre><code class="r">StepsMeanByDay &lt;- aggregate(CleanActivityData$steps, by=list(CleanActivityData$date), FUN=mean)
-head(StepsMeanByDay)
+head(StepsMeanByDay) #Only first few lines displayed for clarity
 </code></pre>
 
 <pre><code>##      Group.1        x
@@ -272,7 +272,7 @@ head(StepsMeanByDay)
 <p>Median of steps by Day</p>
 
 <pre><code class="r">StepsMedianByDay &lt;- aggregate(CleanActivityData$steps, by=list(CleanActivityData$date), FUN=median)
-head(StepsMedianByDay)
+head(StepsMedianByDay) #Only first few lines displayed for clarity
 </code></pre>
 
 <pre><code>##      Group.1 x
@@ -362,7 +362,7 @@ hist(StepsSumByDay2$steps)
 
 <pre><code class="r"># Mean of steps by Day
 StepsMeanByDay2 &lt;- aggregate(ActivityDataFilled$steps, by=list(ActivityDataFilled$date), FUN=mean)
-head(StepsMeanByDay2)
+head(StepsMeanByDay2) #Only first few lines displayed for clarity
 </code></pre>
 
 <pre><code>##      Group.1        x
@@ -376,7 +376,7 @@ head(StepsMeanByDay2)
 
 <pre><code class="r"># Median of steps by Day
 StepsMedianByDay2 &lt;- aggregate(ActivityDataFilled$steps, by=list(ActivityDataFilled$date), FUN=median)
-head(StepsMedianByDay2)
+head(StepsMedianByDay2) #Only first few lines displayed for clarity
 </code></pre>
 
 <pre><code>##      Group.1        x
